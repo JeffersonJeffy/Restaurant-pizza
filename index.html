@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIZZALICIOUS - Accueil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style/style.css">
+  <style>
+    /* Optionnel: Style pour aligner le texte même si hauteur variable ou pour les flèches Swiper */
+    .swiper-slide {
+      height: auto;
+      /* Permet aux slides d'ajuster leur hauteur */
+    }
+
+    .swiper-slide>div {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      /* Assure que le conteneur interne prend toute la hauteur */
+    }
+
+    .swiper-slide h3 {
+      margin-top: auto;
+      /* Pousse le titre vers le bas si nécessaire */
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <div class="bg-red-600 text-white text-xs ">
+    <div class="container mx-auto px-4 py-1 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <span class="flex items-center"><i class="fa-solid fa-location-dot mr-1"></i> Choose your location</span>
+        <span class="flex items-center"><i class="fa-solid fa-phone mr-1"></i> 123-456-7890</span>
+      </div>
+      <div class="flex space-x-3 items-center">
+        <a href="#" aria-label="Facebook" class="hover:text-red-500"><i class="fa-brands fa-facebook-f fa-sm"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-red-500"><i class="fa-brands fa-instagram fa-sm"></i></a>
+        <a href="#" aria-label="Twitter" class="hover:text-red-500"><i class="fa-brands fa-twitter fa-sm"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <nav id="mainNav" class="bg-black/75 text-white sticky top-0 z-50 transition-colors duration-300 ease-in-out">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="hidden md:flex space-x-6 text-sm">
+        <a href="#" class="hover:text-red-500">Home</a>
+        <a href="#" class="hover:text-red-500">About Us</a>
+        <a href="#" class="hover:text-red-500">Menu</a>
+        <a href="#" class="hover:text-red-500">Contact</a>
+      </div>
+      <div class="text-2xl font-bold">PIZZALICIOUS</div>
+      <div class="flex items-center space-x-4">
+        <button class="hover:text-red-500" aria-label="Rechercher"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="hover:text-red-500" aria-label="Compte utilisateur"><i class="fa-solid fa-user"></i></button>
+        <button class="hover:text-red-500" aria-label="Panier"><i class="fa-solid fa-shopping-bag"></i></button>
+        <button class="bg-red-600 px-4 py-1 rounded text-sm hover:bg-red-700">Call</button>
+        <button class="md:hidden hover:text-red-500" aria-label="Ouvrir le menu"><i
+            class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-bg text-white relative">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <div class="container mx-auto px-4 py-32 md:py-48 relative z-10 flex items-center">
+      <div class="absolute left-0 top-1/4 w-16 h-auto opacity-70 text-3xl hidden md:block">
+        <i class="fa-solid fa-seedling"></i>
+      </div>
+
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h1 class="fancy-text text-4xl md:text-6xl leading-tight mb-6">
+          ALL THE BEST <br>
+          THINGS ARE ROUND
+        </h1>
+        <a href="#"
+          class="bg-red-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-red-700 transition duration-300 inline-block">
+          ORDER NOW
+        </a>
+      </div>
+    </div>
+    <div class="bg-red-600 relative py-8 px-4 -mt-10 md:-mt-16 z-10">
+      <div class="container mx-auto flex justify-center items-center relative">
+
+        <div class="absolute left-0 top-1/2 transform -translate-y-1/2 text-yellow-300 text-3xl hidden lg:block -ml-8">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+
+        <div
+          class="bg-white rounded-full shadow-lg px-6 py-4 w-full max-w-4xl flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-6">
+
+          <div class="flex items-center space-x-2 text-sm w-full md:w-auto">
+            <i class="fa-solid fa-calendar-days text-red-600 w-4 text-center"></i>
+            <div class="flex flex-col">
+              <label for="booking-date" class="text-gray-500 text-xs font-semibold">DATE</label>
+              <input id="booking-date" type="text" placeholder="Mon, 20 Jun 2022"
+                class="bg-transparent border-b border-gray-300 focus:border-red-500 outline-none text-gray-700 text-sm w-full">
+            </div>
+          </div>
+
+          <div class="border-l border-gray-200 h-8 hidden md:block"></div>
+
+          <div class="flex items-center space-x-2 text-sm w-full md:w-auto">
+            <i class="fa-regular fa-clock text-red-600 w-4 text-center"></i>
+            <div class="flex flex-col">
+              <label for="booking-time" class="text-gray-500 text-xs font-semibold">TIME</label>
+              <input id="booking-time" type="text" placeholder="Sat, 06 Jun 2022"
+                class="bg-transparent border-b border-gray-300 focus:border-red-500 outline-none text-gray-700 text-sm w-full">
+            </div>
+          </div>
+
+          <div class="border-l border-gray-200 h-8 hidden md:block"></div>
+
+          <div class="flex items-center space-x-2 text-sm w-full md:w-auto">
+            <i class="fa-solid fa-user-group text-red-600 w-4 text-center"></i>
+            <div class="flex flex-col">
+              <label for="booking-guests" class="text-gray-500 text-xs font-semibold">GUESTS</label>
+              <input id="booking-guests" type="text" placeholder="1 Adult"
+                class="bg-transparent border-b border-gray-300 focus:border-red-500 outline-none text-gray-700 text-sm w-full">
+            </div>
+          </div>
+
+          <button
+            class="bg-red-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 w-full md:w-auto flex-shrink-0">
+            BOOK NOW
+          </button>
+
+        </div>
+        <div class="absolute right-0 top-1/2 transform -translate-y-1/2 text-yellow-300 text-3xl hidden lg:block -mr-8">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 ">
+    <section class="py-16 lg:py-24 ">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+        <div class="w-full lg:w-1/2">
+          <img src="assets/pizza1-removebg.png" alt="Pizza fraîchement préparée avec ingrédients"
+            class="rounded-lg w-full">
+        </div>
+
+        <div class="w-full lg:w-1/2">
+          <h2 class="text-2xl lg:text-3xl font-bold text-red-700 mb-8 text-center lg:text-left">
+            FEED THE BEAST WITH<br> A PIZZA FEAST
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12">
+            <div class="flex flex-col items-center text-center space-y-3">
+              <div class="w-20 h-20">
+                <img src="./assets/oil.png" alt="Italian Oil Icon" class="w-full h-full object-contain">
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800 mb-1">Italian Oil</h3>
+                <p class="text-gray-600 text-sm">Remplacez ce texte par votre description.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center text-center space-y-3 sm:mt-8">
+              <div class="w-20 h-20">
+                <img src="./assets/tomato.png" alt="Tomatoes Icon" class="w-full h-full object-contain">
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800 mb-1">Tomatoes</h3>
+                <p class="text-gray-600 text-sm">Remplacez ce texte par votre description.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center text-center space-y-3">
+              <div class="w-20 h-20">
+                <img src="./assets/fish.png" alt="Fresh Ingredients Icon" class="w-full h-full object-contain">
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800 mb-1">Fresh Ingredients</h3>
+                <p class="text-gray-600 text-sm">Remplacez ce texte par votre description.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-center text-center space-y-3 sm:mt-8">
+              <div class="w-20 h-20">
+                <img src="./assets/good.png" alt="Top Chefs Icon" class="w-full h-full object-contain">
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800 mb-1">Top Chefs</h3>
+                <p class="text-gray-600 text-sm">Remplacez ce texte par votre description.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+    <section class="py-16 lg:py-24  overflow-hidden">
+      <div class="container mx-auto px-4 relative">
+
+        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
+
+          <div class="w-full lg:w-1/3 text-center lg:text-left">
+            <h2 class="text-2xl lg:text-3xl font-bold text-red-700 mb-4">
+              PIZZA WITH<br> GREAT TASTE
+            </h2>
+            <p class="text-gray-600 text-sm mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius, mauris id vestibulum.
+            </p>
+            <div class="flex justify-center lg:justify-start space-x-4">
+              <button
+                class="pizza-swiper-button-prev text-red-600 hover:bg-red-100 p-2 border border-red-300 rounded-full w-10 h-10 flex items-center justify-center transition-colors"
+                aria-label="Pizza précédente">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <button
+                class="pizza-swiper-button-next text-red-600 hover:bg-red-100 p-2 border border-red-300 rounded-full w-10 h-10 flex items-center justify-center transition-colors"
+                aria-label="Pizza suivante">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="w-full lg:w-2/3">
+            <div class="swiper pizza-slider overflow-hidden">
+
+              <div class="swiper-wrapper pb-8">
+
+                <div class="swiper-slide">
+                  <div class="text-center">
+                    <img src="assets/img2-removebg.png" alt="Pepperoni Pizza"
+                      class="w-48 h-48 md:w-56 md:h-56 object-contain mb-4 mx-auto">
+                    <h3 class="font-semibold text-lg text-red-600 mb-1">Pepperoni</h3>
+                    <p class="text-gray-500 text-xs mb-2 px-4 min-h-[2.5rem]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <p class="font-bold text-red-600 mb-3">$39.00</p>
+                    <button class="text-sm text-gray-700 font-semibold hover:text-red-600">
+                      <i class="fa-solid fa-plus mr-1"></i> Add To Cart
+                    </button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="text-center">
+                    <img src="assets/img2-removebg.png" alt="Veggie Pizza"
+                      class="w-48 h-48 md:w-56 md-h-56 object-contain mb-4 mx-auto">
+                    <h3 class="font-semibold text-lg text-red-600 mb-1">Veggie Pizza</h3>
+                    <p class="text-gray-500 text-xs mb-2 px-4 min-h-[2.5rem]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <p class="font-bold text-red-600 mb-3">$45.00</p>
+                    <button class="text-sm text-gray-700 font-semibold hover:text-red-600">
+                      <i class="fa-solid fa-plus mr-1"></i> Add To Cart
+                    </button>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="text-center">
+                    <img src="assets/img2-removebg.png" alt="Margherita Pizza"
+                      class="w-48 h-48 md:w-56 md:h-56 object-contain mb-4 mx-auto">
+                    <h3 class="font-semibold text-lg text-red-600 mb-1">Margherita</h3>
+                    <p class="text-gray-500 text-xs mb-2 px-4 min-h-[2.5rem]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <p class="font-bold text-red-600 mb-3">$49.00</p>
+                    <button class="text-sm text-gray-700 font-semibold hover:text-red-600">
+                      <i class="fa-solid fa-plus mr-1"></i> Add To Cart
+                    </button>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-4 lg:mt-10 relative   mx-auto">
+
+      <div class="bg-red-500 text-white text-center py-2 text-xl font-bold tracking-wider">
+        * WE LOVE PIZZA * WE LOVE FAST FOOD * WE LOVE PIZZA * WE
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+        <div class="relative rounded-lg overflow-hidden shadow-md">
+          <img src="assets/img2.jpg" alt="Pizza appétissante" class="w-full h-full object-cover">
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md flex flex-col justify-center items-center py-8 px-6 text-center">
+          <h2 class="text-3xl font-bold text-red-500 mb-4">ORDER NOW</h2>
+          <p class="text-gray-700 mb-6">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+            eu.
+          </p>
+          <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full">
+            ORDER NOW
+          </button>
+          <div class="absolute bottom-4 left-4">
+            <div class="relative">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-12 h-12 text-gray-400">
+                <path fill-rule="evenodd"
+                  d="M9.53 2.47a.75.75 0 011.06 0l6 6a.75.75 0 11-1.06 1.06L12 4.31V15a.75.75 0 01-1.5 0V4.31L4.53 9.53a.75.75 0 01-1.06-1.06l6-6zM3 15.75a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                  clip-rule="evenodd" />
+              </svg>
+              <div class="absolute -top-2 -right-2 bg-white rounded-full p-1 shadow-sm">
+                <span class="text-xs text-red-500 font-semibold">PIZZA</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute top-4 right-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="w-6 h-6 text-red-400">
+              <path
+                d="M4.5 6.75a.75.75 0 01.75-.75h13.5a.75.75 0 010 1.5H5.25a.75.75 0 01-.75-.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm3.75 4.5a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75z" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="relative rounded-lg overflow-hidden shadow-md">
+          <img src="assets/img3.jpg" alt="Pizza et ses sauces" class="w-full h-full object-cover">
+          <div class="absolute top-4 left-4 space-y-2">
+            <div class="bg-white bg-opacity-75 rounded-md p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-6 h-6 text-gray-700">
+                <path fill-rule="evenodd"
+                  d="M12 2.25c-5.384 0-9.75 4.366-9.75 9.75s4.366 9.75 9.75 9.75 9.75-4.366 9.75-9.75S17.384 2.25 12 2.25zm3 10.5a.75.75 0 00-1.5 0v2.25H10.5a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v2.25h2.25a.75.75 0 000-1.5H15V12.75a.75.75 0 00-1.5 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="bg-white bg-opacity-75 rounded-md p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-6 h-6 text-gray-700">
+                <path fill-rule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.75 13.5a7.5 7.5 0 1115 0 7.5 7.5 0 01-15 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="bg-white bg-opacity-75 rounded-md p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-6 h-6 text-gray-700">
+                <path fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.978-1.077 2.426 0l7.647 18.41a.75.75 0 01-.67 1.139H3.723a.75.75 0 01-.67-1.139l7.645-18.41z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="bg-gray-100 font-sans dotted-bg py-8 my-4 lg:py-16 ">
+      <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-lg">
+        <h1 class="text-3xl font-bold text-red-600 mb-6 text-center">ORDER BEST PIZZA</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-x-6 mb-8">
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Buffalo</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">49$</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Cappriciosa</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">47$</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Palermo</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">38$</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Margherita</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">39$</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Napolitano</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">52$</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Hawaiian</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">53$</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Bolognese</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">35$</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Vegetarian</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">40$</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Vegetarian</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">40$</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold text-gray-800">Bolognese</h2>
+            <p class="text-gray-600 text-sm">Tomato sauce, mozzarella, virgin olive oil, fresh basil, garlic, pesto sos,
+              mayo and ketchup flavours</p>
+            <p class="font-bold text-gray-800 mt-1">35$</p>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-8">
+          <div class="relative w-24 h-16 bg-gray-200 rounded-md overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 70" fill="none" stroke="#dc2626" stroke-width="4"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <path d="M5 65C15 55 25 60 35 50C45 40 55 45 65 35C75 25 85 30 95 20" />
+              <path d="M10 55C20 45 30 50 40 40C50 30 60 35 70 25C80 15 90 20 98 10" />
+              <ellipse cx="30" cy="20" rx="5" ry="5" />
+              <ellipse cx="70" cy="45" rx="4" ry="4" />
+              <path d="M15 15L85 5" />
+            </svg>
+          </div>
+          <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full">
+            ORDER NOW
+          </button>
+          <div class="relative w-24 h-16 bg-gray-200 rounded-md overflow-hidden flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#dc2626" stroke-width="3">
+              <path d="M32 5C16.5 5 3 18.5 3 34S16.5 63 32 63 61 49.5 61 34 49.5 5 32 5Z" />
+              <path d="M20 20L44 44M44 20L20 44" />
+              <circle cx="32" cy="34" r="8" fill="#fff" stroke="#dc2626" />
+              <path d="M32 26V42" />
+              <path d="M24 34H40" />
+              <path d="M10 34C10 22.9 19.9 13 32 13S54 22.9 54 34" stroke-dasharray="3 3" />
+            </svg>
+          </div>
+        </div>
+
+        <p class="text-gray-500 text-xs mt-4 text-center">*Offers available for carry-out and delivery orders only.</p>
+      </div>
+    </section>
+    <section>
+      <div class=" mx-auto py-8 px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 ">
+          <div class="relative">
+            <img src="assets/img1.jpg" alt="Délicieuse Pizza" class="w-full h-96 object-cover">
+          </div>
+          <div class="p-6 flex flex-col justify-center">
+            <h2 class="text-2xl font-bold text-red-500 mb-2">TWO PIZZAS FOR</h2>
+            <h3 class="text-4xl font-extrabold text-gray-800 mb-4">THE PRICE OF ONE</h3>
+            <p class="text-gray-700 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul class="grid grid-cols-2 gap-2 text-gray-600 text-sm">
+              <li>• Cappriciosa</li>
+              <li>• Vesuvio</li>
+              <li>• Quatri Stagione</li>
+              <li>• Funghi Rosa</li>
+              <li>• Pepperoni</li>
+              <li>• Stivale</li>
+            </ul>
+            <div class="absolute top-4 right-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-6 h-6 text-red-400">
+                <path fill-rule="evenodd"
+                  d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div class="p-6 flex flex-col justify-center">
+            <h2 class="text-2xl font-bold text-red-500 mb-2">THE SPECIALTY</h2>
+            <h3 class="text-4xl font-extrabold text-gray-800 mb-4">OF THE HOUSE</h3>
+            <p class="text-gray-700 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full w-fit">
+              ORDER NOW
+            </button>
+            <div class="absolute bottom-4 left-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 text-red-400">
+                <path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8z" />
+                <path d="M12 8v4m0 4h.01" />
+              </svg>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="assets/img3.jpg" alt="Pizza aux Pepperonis" class="w-full h-96 object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class=" mx-auto py-8 px-4 sm:px-4 lg:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <div class="rounded-md overflow-hidden shadow-md">
+            <img src="assets/img3.jpg" alt="Pizza 1" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-md overflow-hidden shadow-md">
+            <img src="assets/img4.jpg" alt="Pizza 2" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-md overflow-hidden shadow-md">
+            <img src="assets/img2.jpg" alt="Pizza 3" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-md overflow-hidden shadow-md">
+            <img src="assets/img1.jpg" alt="Pizza 4" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-md overflow-hidden shadow-md">
+            <img src="assets/img0.jpg" alt="Pizza 5" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class=" bg-gray-800 text-gray-300 py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Votre Restaurant. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const nav = document.getElementById('mainNav');
+      const scrollThreshold = 50; // Seuil de scroll avant le changement
+
+      const updateNavBackground = () => {
+        if (window.scrollY > scrollThreshold) {
+          nav.classList.add('bg-transparent');
+          nav.classList.remove('bg-black/75');
+        } else {
+          nav.classList.remove('bg-transparent');
+          nav.classList.add('bg-black/75');
+        }
+      };
+
+      window.addEventListener('scroll', updateNavBackground);
+      updateNavBackground(); // Appel initial
+    });
+  </script>
+
+  <script>
+    const swiper = new Swiper('.pizza-slider', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 15,
+      navigation: {
+        nextEl: '.pizza-swiper-button-next',
+        prevEl: '.pizza-swiper-button-prev',
+      },
+      breakpoints: {
+        640: { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 30 }
+      },
+      // Décommentez pour pagination
+      // pagination: {
+      //   el: '.swiper-pagination',
+      //   clickable: true,
+      // },
+    });
+  </script>
+</body>
+
+</html>
